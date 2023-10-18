@@ -108,4 +108,5 @@ int __our_strlen_count_string(char *string)
 	for (; string[mylength] != '\0'; mylength++)
 		;
 	return (mylength);
+
 }
