@@ -59,6 +59,5 @@ void __our_quit_exit_shell(char **tokenized_command)
 		}
 	}
 	else
-		__our_printedstring("$: exit doesn't take
-				more than one argument\n", STDERR_FILENO);
+		__our_printedstring("$: exit doesn't take more than one argument\n", STDERR_FILENO);
 }
