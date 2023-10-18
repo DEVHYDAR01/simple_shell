@@ -116,7 +116,7 @@ void *__our_realloc_memoryblock(void *ptr,
 void __our_ctrl_c_handler(int signum)
 {
 	if (signum == SIGINT)
-		_our_printstr("\n($) ", STDIN_FILENO);
+		__our_printedstring("\n($) ", STDIN_FILENO);
 }
 
 /**
@@ -140,3 +140,5 @@ void __our_remove_comment_ignores(char *input)
 	}
 	input[k] = '\0';
 }
+
+

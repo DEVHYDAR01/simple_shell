@@ -1,8 +1,14 @@
 #include "shell.h"
+
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
+
 /**
  * main - This our main shell that is coded by -
  * Authors : DEVHYDAR
- *  MARWAN MAI
+ * 			 MARWAN MAI
  * @argc: This are the number of arguments passed
  * @argv: This are the program arguments to be parsed
  *
@@ -12,12 +18,11 @@
  * Return: 0 on success is returned
  */
 
-	char **commands = NULL;
-	char *line = NULL;
-	char *shell_name = NULL;
-	int status = 0;
+
 int main(int argc __attribute__((unused)), char **argv)
 {
+	
+
 	char **current_command = NULL;
 	int i, type_command = 0;
 	size_t n = 0;
@@ -27,7 +32,7 @@ int main(int argc __attribute__((unused)), char **argv)
 	while (1)
 	{
 		__our_non_interactive();
-		_our_printstr(" ($) ", STDOUT_FILENO);
+		__our_printedstring(" ($) ", STDOUT_FILENO);
 		if (getline(&line, &n, stdin) == -1)
 		{
 			free(line);
@@ -53,5 +58,8 @@ int main(int argc __attribute__((unused)), char **argv)
 		free(commands);
 	}
 	free(line);
+
 	return (status);
 }
+
+	

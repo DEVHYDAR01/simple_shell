@@ -112,3 +112,4 @@ char *__our_strchr_locates_charstr(char *s, char c)
 	else
 		return (NULL);
 }
+

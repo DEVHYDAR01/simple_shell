@@ -36,13 +36,13 @@ char **__our_tokenizeinput(char *input_string, char *delim)
 }
 
 /**
- *_our_printstr - This function will print a string to the stdout (1)
+ *__our_printedstring - This function will print a string to the stdout (1)
  *@string: This will be the string to be printed
  *@stream: This stream will allow us to print to the stdout
  *
  *Return: return nothing void
  */
-void _our_printstr(char *string, int stream)
+void __our_printedstring(char *string, int stream)
 {
 	int k = 0;
 
@@ -108,5 +108,4 @@ int __our_strlen_count_string(char *string)
 	for (; string[mylength] != '\0'; mylength++)
 		;
 	return (mylength);
-
 }

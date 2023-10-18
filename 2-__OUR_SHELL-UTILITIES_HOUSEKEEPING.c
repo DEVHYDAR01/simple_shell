@@ -48,7 +48,6 @@ int parse_command(char *command)
  */
 void execute_command(char **tokenized_command, int command_type)
 {
-	char *shell_name = NULL;
 	void (*func)(char **command);
 
 	if (command_type == EXTERNAL_COMMAND)
@@ -74,10 +73,10 @@ void execute_command(char **tokenized_command, int command_type)
 	}
 	if (command_type == INVALID_COMMAND)
 	{
-		_our_printstr(shell_name, STDERR_FILENO);
-		_our_printstr(": 1: ", STDERR_FILENO);
-		_our_printstr(tokenized_command[0], STDERR_FILENO);
-		_our_printstr(": not found\n", STDERR_FILENO);
+		__our_printedstring(shell_name, STDERR_FILENO);
+		__our_printedstring(": 1: ", STDERR_FILENO);
+		__our_printedstring(tokenized_command[0], STDERR_FILENO);
+		__our_printedstring(": not found\n", STDERR_FILENO);
 		status = 127;
 	}
 }
@@ -166,5 +165,4 @@ char *_getenv(char *name)
 			return (pair_ptr + 1);
 	}
 	return (NULL);
-
 }
