@@ -73,10 +73,10 @@ void execute_command(char **tokenized_command, int command_type)
 	}
 	if (command_type == INVALID_COMMAND)
 	{
-		__our_printedstring(shell_name, STDERR_FILENO);
-		__our_printedstring(": 1: ", STDERR_FILENO);
-		__our_printedstring(tokenized_command[0], STDERR_FILENO);
-		__our_printedstring(": not found\n", STDERR_FILENO);
+		_our_printstr(shell_name, STDERR_FILENO);
+		_our_printstr(": 1: ", STDERR_FILENO);
+		_our_printstr(tokenized_command[0], STDERR_FILENO);
+		_our_printstr(": not found\n", STDERR_FILENO);
 		status = 127;
 	}
 }

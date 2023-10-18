@@ -14,8 +14,8 @@ void __our_env_currentenvirons(char **tokenized_command
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		__our_printedstring(environ[i], STDOUT_FILENO);
-		__our_printedstring("\n", STDOUT_FILENO);
+		_our_printstr(environ[i], STDOUT_FILENO);
+		_our_printstr("\n", STDOUT_FILENO);
 	}
 }
 
@@ -44,10 +44,10 @@ void __our_quit_exit_shell(char **tokenized_command)
 		arg = __our_atoi_str_to_int(tokenized_command[1]);
 		if (arg == -1)
 		{
-			__our_printedstring(shell_name, STDERR_FILENO);
-			__our_printedstring(": 1: exit: Illegal number: ", STDERR_FILENO);
-			__our_printedstring(tokenized_command[1], STDERR_FILENO);
-			__our_printedstring("\n", STDERR_FILENO);
+			_our_printstr(shell_name, STDERR_FILENO);
+			_our_printstr(": 1: exit: Illegal number: ", STDERR_FILENO);
+			_our_printstr(tokenized_command[1], STDERR_FILENO);
+			_our_printstr("\n", STDERR_FILENO);
 			status = 2;
 		}
 		else
@@ -59,5 +59,5 @@ void __our_quit_exit_shell(char **tokenized_command)
 		}
 	}
 	else
-		__our_printedstring("$: exit doesn't take more than one argument\n", STDERR_FILENO);
+		_our_printstr("$: exit doesn't take more than one argument\n", STDERR_FILENO);
 }
