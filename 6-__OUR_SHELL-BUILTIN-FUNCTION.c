@@ -28,6 +28,10 @@ void __our_env_currentenvirons(char **tokenized_command
 
 void __our_quit_exit_shell(char **tokenized_command)
 {
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	int num_token = 0, arg;
 
 	for (; tokenized_command[num_token] != NULL; num_token++)

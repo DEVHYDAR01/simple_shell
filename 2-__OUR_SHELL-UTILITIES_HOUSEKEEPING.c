@@ -48,6 +48,10 @@ int parse_command(char *command)
  */
 void execute_command(char **tokenized_command, int command_type)
 {
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	void (*func)(char **command);
 
 	if (command_type == EXTERNAL_COMMAND)

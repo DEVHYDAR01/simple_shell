@@ -6,6 +6,10 @@
  */
 void __our_non_interactive(void)
 {
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	char **current_command = NULL;
 	int i, type_command = 0;
 	size_t n = 0;

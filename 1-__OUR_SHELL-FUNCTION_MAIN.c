@@ -1,14 +1,8 @@
 #include "shell.h"
-
-	char **commands = NULL;
-	char *line = NULL;
-	char *shell_name = NULL;
-	int status = 0;
-
 /**
  * main - This our main shell that is coded by -
  * Authors : DEVHYDAR
- * 			 MARWAN MAI
+ *  MARWAN MAI
  * @argc: This are the number of arguments passed
  * @argv: This are the program arguments to be parsed
  *
@@ -17,12 +11,12 @@
  * Prints error on Failure
  * Return: 0 on success is returned
  */
-
-
 int main(int argc __attribute__((unused)), char **argv)
 {
-	
-
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	char **current_command = NULL;
 	int i, type_command = 0;
 	size_t n = 0;
@@ -58,6 +52,5 @@ int main(int argc __attribute__((unused)), char **argv)
 		free(commands);
 	}
 	free(line);
-
 	return (status);
 }
