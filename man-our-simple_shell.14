@@ -1,10 +1,10 @@
 .TH SHELL 18TH "OCTOBER WEDNESDAY, 2023" "alx-Software-Engineering-Programme" "0x16" "1.01" "C - simple_shell - man page"
 
 B.\"Manpage for simple shell 
-.\"Created by DEVHYDAR01 and MARWAN MAI
+ \"Created by DEVHYDAR01 and MARWAN MAI
 
 .SH NAME
-.B simple_shell \- simple UNIX command interpreter made in C 
+simple_shell \- simple UNIX command interpreter made in C 
 
 .SH SYNOPSIS
 $ /hsh [options] [file]
@@ -21,8 +21,8 @@ Always returns status of the previously executed command ( 0 if no command was e
 
 look through the PATH env variable for executable program file location and execute it.
 
-.B Invocation
-.in +2n
+Invocation
+in +2n
 simple_shell can be invoked both interactively and non-interactively.
 If invoked with standard input not connected to a terminal, it reads and executes received commands in order.
 
@@ -40,7 +40,7 @@ If arguments remain after option processing, the first argument is assumed to be
 
 .SH OPTIONS
 
-.B simple_shell
+simple_shell
 Command options will be typed after the main command followed by a space and a
  '-' symbol.
 

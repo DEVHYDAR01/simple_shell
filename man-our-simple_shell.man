@@ -1,0 +1,87 @@
+[4mSHELL[24m(18TH)                          0x16                          [4mSHELL[24m(18TH)
+
+B.
+
+
+
+[1mNAME[0m
+       simple_shell - simple UNIX command interpreter made in C
+
+
+[1mSYNOPSIS[0m
+       $ /hsh [options] [file]
+
+
+[1mDESCRIPTION[0m
+       Simple_Shell  is  a command language interpreter that executes commands
+       read from the standard input.  Clone of sh
+
+
+[1mReturn Value[0m
+       Always returns status of the previously executed command ( 0 if no com-
+       mand was executed) , number is going to mean exit fail codes
+
+
+[1mPATH[0m
+       look through the PATH env variable for executable program file location
+       and execute it.
+
+       Invocation in +2n simple_shell can be invoked  both  interactively  and
+       non-interactively.   If  invoked with standard input not connected to a
+       terminal, it reads and executes received commands in order.
+
+       If simple_shell is invoked with standard input connected to a terminal,
+       an interactive shell is  opened.   When  executing  interactively,  the
+       simpl_shell displays the prompt
+
+
+[1mCOPYRIGHT[0m
+       data_shell is Copyright (C) 2023 by DEVHYDAR and MARWAN MAI
+
+
+[1mDESCRIPTION[0m
+       Data_shell  is  a  sh-compatible command language interpreter that exe-
+       cutes commands read from the standard input or from a file.
+
+
+[1mARGUMENTS[0m
+       If arguments remain after option processing, the first argument is  as-
+       sumed  to be the name of a file containing shell commands. DATASH reads
+       and executes commands fromthis file, then exits. DATASH exit status  is
+       the  exit status of the last command executed in the script. If no com-
+       mands are executed, the exit status is 0. An attemptis  first  made  to
+       open  the file in the current directory, and, if no file is found, then
+       the shell searches the directories in PATH for the script.
+
+
+[1mOPTIONS[0m
+       simple_shell Command options will be typed after the main command  fol-
+       lowed by a space and a
+        '-' symbol.
+
+
+[1mEXAMPLE[0m
+       $ ls -l
+
+
+[1mExit Status[0m
+       DATASH  exit status of an executed command is the value returned by the
+       waitpid system call or equivalent function. A command which exits  with
+       a zero exit status has succeeded. An exit status of zero indicates suc-
+       cess. A non-zero exit status indicates failure.
+
+       If  a command is not found, the child process created to execute it re-
+       turns a status of 127.
+
+       All builtins return zero on success and one or two on  incorrect  usage
+       (indicated by a corresponding error message).
+
+
+[1mBUGS[0m
+       not many found.
+
+
+[1mAUTHOR[0m
+       DEVHYDAR01, MARWAN MAI.
+
+alx-Software-Engineering... OCTOBER WEDNESDAY, 2023                [4mSHELL[24m(18TH)
