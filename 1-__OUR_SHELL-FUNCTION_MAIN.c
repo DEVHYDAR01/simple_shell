@@ -32,7 +32,7 @@ int main(int argc __attribute__((unused)), char **argv)
 	while (1)
 	{
 		__our_non_interactive();
-		__our_printedstring(" ($) ", STDOUT_FILENO);
+		_our_printstr(" ($) ", STDOUT_FILENO);
 		if (getline(&line, &n, stdin) == -1)
 		{
 			free(line);

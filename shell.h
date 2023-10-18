@@ -44,7 +44,7 @@ extern int status;
 
 /*This  will be our first helper functions*/
 char **__our_tokenizeinput(char *input_string, char *delim);
-void __our_printedstring(char *string, int stream);
+void _our_printstr(char *string, int stream);
 void __our_remove_newline(char *str);
 void __our_strcpy_string_buffer(char *source, char *dest);
 int __our_strlen_count_string(char *string);
